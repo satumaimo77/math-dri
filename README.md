@@ -1,24 +1,36 @@
-# README
+# アプリケーション名
+mathドリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション概要
+授業プリントを共有することができるメリット  
+### 教員側のメリット
+  ・授業プリントを共有することで、授業づくりの時間の軽減<br>
+  ・授業内容を共有することで、教材研究の手助けになる<br>
+  ・不登校生徒にプリントを配布しにいく必要がない<br>
+### 生徒側のメリット
+  ・家庭学習の教材として役立つ
 
-Things you may want to cover:
+# URL
 
-* Ruby version
+# 利用方法
+### 授業内容の閲覧
+  ・投稿内容の閲覧はすべてのユーザーが可能<br>
+### 授業内容の投稿
+  ・indexページからログインもしくは、新規登録を行う<br>
+  ・indexページから投稿ページに遷移、必要事項を入力、投稿を行う
 
-* System dependencies
 
-* Configuration
+# このアプリケーションを作成した背景
+  前職の教員時代に教材研究やクラブ指導に追われ、残業が100時間を超えることがあった。特に時間がかかったのが授業プリント作りであった。生徒にはたくさんの問題に取り組んでほしいと思うが、１枚の授業プリントの作成にも何時間と時間がかかるため、簡単な計算プリントなどはネットから拾ってこれないかと常日頃から考えていたが、中学校レベルの問題を取りまとめてくれいているサイトは少なかったため自分の力で作ってみようと考えた。
 
-* Database creation
+# 実装予定の機能
+  ・コメント機能の実装 <br>
+  ・userのフォロー機能 <br>
+  ・投稿のお気に入り機能 <br>
+  ・投稿のパス機能　　などを随時追加予定
 
-* Database initialization
+# データベース設計
+  [![Image from Gyazo](https://i.gyazo.com/06e5996a9e641b1c01eeaadff583ac02.png)](https://gyazo.com/06e5996a9e641b1c01eeaadff583ac02)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 画面遷移図
+  [![Image from Gyazo](https://i.gyazo.com/7d6f8d26f63a2e6dd936617c8bcbfb61.png)](https://gyazo.com/7d6f8d26f63a2e6dd936617c8bcbfb61)
