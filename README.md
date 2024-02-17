@@ -11,7 +11,7 @@ mathドリ
   ・家庭学習の教材として役立つ
 
 # URL
-
+https://math-dri.onrender.com
 # 利用方法
 ### 授業内容の閲覧
   ・投稿内容の閲覧はすべてのユーザーが可能<br>
@@ -31,6 +31,30 @@ mathドリ
 
 # データベース設計
   [![Image from Gyazo](https://i.gyazo.com/06e5996a9e641b1c01eeaadff583ac02.png)](https://gyazo.com/06e5996a9e641b1c01eeaadff583ac02)
+
+### usersテーブル
+
+| Column | Type | Options  |
+| ------ | ----- | --------- |
+| email | string | null: false ,unique: true |
+| encrypted_password | string | null: false |
+| nickname | string | null: false |
+
+### Association
+- has_many :items
+
+### itemsテーブル
+
+| Column | Type | Options  |
+| ------ | ----- | --------- |
+| name | string | null: false |
+| info | text | null: false |
+| grade_id | integer | null: false |
+| category_id | integer | null: false |
+| user | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
 
 # 画面遷移図
   [![Image from Gyazo](https://i.gyazo.com/7d6f8d26f63a2e6dd936617c8bcbfb61.png)](https://gyazo.com/7d6f8d26f63a2e6dd936617c8bcbfb61)
