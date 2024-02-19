@@ -1,0 +1,36 @@
+<%= render "shared/header" %>
+
+<%# プリントの概要 %>
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @item.name %>
+    </h2>
+    <div class="item-pdf-content">
+      <object data="<%= @item.post_data.url %>" type="application/pdf" class="item-box-pdf"></object>
+    </div>
+
+    <% if current_user && @item && current_user.id == @item.user_id %>
+      <%= link_to "商品の編集", edit_item_path(@item.id) , method: :get, class: "item-red-btn" %>
+      <p class="or-text">or</p>
+      <%= link_to "削除", item_path(@item.id), data: {turbo_method: :delete}, class:"item-destroy" %>
+    <% end %>
+
+    <div class="item-explain-box">
+      <span><%= @item.info %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">学年</th>
+          <td class="detail-value"><%= @item.grade.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">カテゴリー</th>
+          <td class="detail-value"><%= @item.category.name %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  <%# /プリントの概要 %>
