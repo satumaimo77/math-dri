@@ -34,5 +34,42 @@
         </li>
       </ul>
     </div>
+    <%# 投稿一覧 %>
+    <div class='item-contents'>
+      <h2 class='title'>投稿内容一覧</h2>
+      <div class="subtitle" >
+        新規投稿内容
+      </div>
+      <ul class='item-lists'>
+
+        <% unless @items.empty?%>
+          <% @items.each do |item|%>
+          <li class='list'>
+            <%= link_to item_path(item.id) do %> 
+            <div class='item-pdf-content'>
+              <object data="<%= item.post_data.url %>" type="application/pdf" class="item-pdf"></object>
+            </div>
+            <div class='item-info'>
+              <h3 class='item-name'>
+                <%= "#{item.name}" %>
+              </h3>
+              <div class='item-content'>
+                <span><%= "学年：#{item.grade.name}" %><br><%= "単元：#{item.category.name}" %></span>
+              </div>
+            </div>
+            <% end %>
+          </li>
+          <% end %>
+
+        <% else %>
+
+          <li class='list'>
+            <div class="no-content"> まだ投稿はありません。<br><span class="red">会員登録</span>をして投稿しよう！</div>
+          </li>
+
+        <% end %>
+      </ul>
+    </div>
+    <%# /投稿一覧 %>
   </div>
 </div>

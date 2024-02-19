@@ -1,0 +1,68 @@
+<div class="items-send-contents">
+  <header class="items-send-header">
+    <%= link_to image_tag('/math_dri_logo.png' , size: '100x100'), "/" %>
+  </header>
+  <div class="items-send-main">
+    <h2 class="items-send-title">プリントの情報を入力</h2>
+    <%= form_with model: @item, url: items_path , local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# プリントデータ %>
+    <div class="pdf-upload">
+      <div class="weight-bold-text">
+        投稿プリントデータ
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :post_data, id:"post-data" %>
+      </div>
+    </div>
+    <%# /プリントデータ %>
+    <%# プリント名とプリントの説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        プリント名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"プリント名（必須)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          プリントの説明
+        </div>
+        <%= f.text_area :info, class:"items-text", id:"item-info", placeholder:"プリントの説明（例：正負の計算問題をドリル化しました。）" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# プリント名とプリントの説明 %>
+
+    <%# プリントの詳細 %>
+    <div class="items-detail">
+      <div class="weight-bold-text">プリントの詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          学年
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:"select-box", id:"item-grade"}) %>
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
+    </div>
+    <%# プリントの詳細 %>
+
+    <%# 下部ボタン %>
+    <div class="send-btn-contents">
+      <%= f.submit "投稿する" ,class:"send-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+</div>
