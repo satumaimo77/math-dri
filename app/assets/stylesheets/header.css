@@ -4,7 +4,7 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 0 15vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,7 +40,15 @@
 
 .logout {
   text-decoration: none;
+  margin-right: 3vw;
   color: #333333;
+}
+
+.new-post {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333333;
+  border: 2px solid steelblue;
 }
 
 .login {
