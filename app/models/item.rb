@@ -1,6 +1,8 @@
 class Item < ApplicationRecord
   belongs_to :user
 
+  mount_uploader :post_data, PostUploader
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :grade
   belongs_to :category
