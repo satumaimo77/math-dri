@@ -6,4 +6,8 @@ class Grade < ActiveHash::Base
     { id: 4, name: '3年' },
     { id: 5, name: 'その他' }
   ]
+
+  include ActiveHash::Associations
+  has_many :items
+
 end

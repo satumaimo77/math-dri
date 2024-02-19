@@ -24,4 +24,7 @@ class Genre < ActiveHash::Base
     { id: 22, name: '標本調査' },
     { id: 23, name: 'その他' }
   ]
+
+  include ActiveHash::Associations
+  has_many :items
 end
