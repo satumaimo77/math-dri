@@ -12,6 +12,11 @@ mathドリ
 
 # URL
 https://math-dri.onrender.com
+
+# テスト用アカウント
+・Basic認証 ID: admin ,PASS: 2222<br>
+・テスト用アカウント user.nickname: aaa ,メールアドレス: a@a ,Password: aaa111  
+
 # 利用方法
 ### 授業内容の閲覧
   ・投稿内容の閲覧はすべてのユーザーが可能<br>
@@ -30,7 +35,7 @@ https://math-dri.onrender.com
   ・投稿のパス機能　　などを随時追加予定
 
 # データベース設計
-  [![Image from Gyazo](https://i.gyazo.com/06e5996a9e641b1c01eeaadff583ac02.png)](https://gyazo.com/06e5996a9e641b1c01eeaadff583ac02)
+  [![Image from Gyazo](https://i.gyazo.com/894356105ef44399978be295a08b2ea8.png)](https://gyazo.com/894356105ef44399978be295a08b2ea8)
 
 ### usersテーブル
 
@@ -48,7 +53,8 @@ https://math-dri.onrender.com
 | Column | Type | Options  |
 | ------ | ----- | --------- |
 | name | string | null: false |
-| info | text | null: false |
+| info | text |  |
+| post_data | string | null:false |
 | grade_id | integer | null: false |
 | category_id | integer | null: false |
 | user | references | null: false, foreign_key: true |
