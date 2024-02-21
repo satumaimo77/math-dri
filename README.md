@@ -15,7 +15,7 @@ https://math-dri.onrender.com
 
 # テスト用アカウント
 ・Basic認証 ID: admin ,PASS: 2222<br>
-・テスト用アカウント user.nickname: aaa ,メールアドレス: a@a ,Password: aaa111  
+・テスト用アカウント user.nickname: aaa ,メールアドレス: a@a ,Password: aaaaaa
 
 # 利用方法
 ### 授業内容の閲覧
